@@ -112,12 +112,24 @@ def play():
         if turn%2==0:
             print("Turn of",p1)
             mm=random.choice(m)
-            
+            qn=createqn(mm)
+            print (qn)
+            modqn=qn
             notsaid=True
             while notsaid:
-                letter=input("Your Letter : ")
-                if letter in m:
+                l=input("Your Letter : ")
+                if l in m:
                     #unlock
+                    modqn=unlock(modqn,mm,l)
+                    print(modqn)
+                    d=input("Choose : \n1. Guess movie name or \n2. Unlock another letter : ")
+                    if d==1:
+                        ans=input("Enter movie Name : ")
+                        if ans==mm:
+                            pp1+=1
+                            print("Answer is Correct")
+                            notsaid=False
+                            print(p1name,"Your Score is : ",pp1)
                 else:
                     print(letter,"not found")
         else:
