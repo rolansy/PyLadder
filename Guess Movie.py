@@ -102,6 +102,19 @@ m = [
     "Birdman",
     "The Shape of Water"
 ]
+
+def createqn(m):
+    ls=list(m)
+    temp=[]
+    for i in ls:
+        if ls==" ":
+            temp.append(" ")
+        else:
+            temp.append("_")
+    qn="".join(str(x) for x in temp)
+    return qn
+
+
 def play():
     p1=input("Enter Name of Player 1 : ")
     p2=input("Enter Name of Player 2 : ")
