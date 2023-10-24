@@ -29,5 +29,8 @@ else:
     else:
         print("Player Lost")
         dontswap+=1
+print("Swap Wins : ",swap)
+print("Non Swap Wins : ",dontswap)
+
     
 
