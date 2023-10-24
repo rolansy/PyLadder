@@ -114,6 +114,21 @@ def createqn(m):
     qn="".join(str(x) for x in temp)
     return qn
 
+def unlock(qn,m,l):
+    n=len(m)
+    ref=list(m)
+    temp=[]
+    qnl=list(qn)
+    for i in range(n):
+        if ref[i]==" " or ref[i].lower()==l.lower():
+            temp.append(ref[i])
+        else:
+            if qnl[i]=="_":
+                temp.append("_")
+            else:
+                temp.append(ref[i]) #it was already correct and there in modqn
+    qn="".join(str(x) for x in temp)
+    return qn
 
 def play():
     p1=input("Enter Name of Player 1 : ")
@@ -129,16 +144,19 @@ def play():
             print (qn)
             modqn=qn
             notsaid=True
+            print(mm)
+            print(qn)
+            print("modqn",modqn)
             while notsaid:
                 l=input("Your Letter : ")
-                if l in m:
+                if l.lower() in mm.lower():
                     #unlock
                     modqn=unlock(modqn,mm,l)
                     print(modqn)
-                    d=input("Choose : \n1. Guess movie name or \n2. Unlock another letter : ")
+                    d=int(input("Choose : \n1. Guess movie name or \n2. Unlock another letter : "))
                     if d==1:
                         ans=input("Enter movie Name : ")
-                        if ans==mm:
+                        if ans.lower()==mm.lower():
                             pp1+=1
                             print("Answer is Correct")
                             notsaid=False
@@ -147,7 +165,7 @@ def play():
                             print("Wrong Answer. Try again")
                 else:
                     print(l,"not found")
-            c=input("Press 1 to continue or 0 to quit : ")
+            c=input("Press 1 to continue or 0 to quit : ")  
             if c==0:
                 print(p1,"score : ",pp1)
                 print(p2,"score : ",pp2)
