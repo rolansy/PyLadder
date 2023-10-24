@@ -153,8 +153,8 @@ def play():
                     #unlock
                     modqn=unlock(modqn,mm,l)
                     print(modqn)
-                    d=int(input("Choose : \n1. Guess movie name or \n2. Unlock another letter : "))
-                    if d==1:
+                    d=input("1. Guess movie name\n2. Unlock another letter\nChoose : ")
+                    if int(d)==1:
                         ans=input("Enter movie Name : ")
                         if ans.lower()==mm.lower():
                             pp1+=1
@@ -171,31 +171,34 @@ def play():
                 print(p2,"score : ",pp2)
                 will=False
         else:
-            print("Turn of",p2)
+            print("Turn of",p1)
             mm=random.choice(m)
             qn=createqn(mm)
             print (qn)
             modqn=qn
             notsaid=True
+            print(mm)
+            print(qn)
+            print("modqn",modqn)
             while notsaid:
                 l=input("Your Letter : ")
-                if l in m:
+                if l.lower() in mm.lower():
                     #unlock
                     modqn=unlock(modqn,mm,l)
                     print(modqn)
-                    d=input("Choose : \n1. Guess movie name or \n2. Unlock another letter : ")
-                    if d==1:
+                    d=input("1. Guess movie name\n2. Unlock another letter\nChoose : ")
+                    if int(d)==1:
                         ans=input("Enter movie Name : ")
-                        if ans==mm:
-                            pp2+=1
+                        if ans.lower()==mm.lower():
+                            pp1+=1
                             print("Answer is Correct")
                             notsaid=False
-                            print(p2,"Your Score is : ",pp2)
+                            print(p1,"Your Score is : ",pp1)
                         else:
                             print("Wrong Answer. Try again")
                 else:
                     print(l,"not found")
-            c=input("Press 1 to continue or 0 to quit : ")
+            c=input("Press 1 to continue or 0 to quit : ")  
             if c==0:
                 print(p1,"score : ",pp1)
                 print(p2,"score : ",pp2)
