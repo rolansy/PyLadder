@@ -154,7 +154,7 @@ def play():
                     modqn=unlock(modqn,mm,l)
                     print(modqn)
                     d=input("1. Guess movie name\n2. Unlock another letter\nChoose : ")
-                    if int(d)==1:
+                    if d=="1":
                         ans=input("Enter movie Name : ")
                         if ans.lower()==mm.lower():
                             pp1+=1
@@ -166,12 +166,12 @@ def play():
                 else:
                     print(l,"not found")
             c=input("Press 1 to continue or 0 to quit : ")  
-            if c==0:
+            if c=="0":
                 print(p1,"score : ",pp1)
                 print(p2,"score : ",pp2)
                 will=False
         else:
-            print("Turn of",p1)
+            print("Turn of",p2)
             mm=random.choice(m)
             qn=createqn(mm)
             print (qn)
@@ -187,19 +187,19 @@ def play():
                     modqn=unlock(modqn,mm,l)
                     print(modqn)
                     d=input("1. Guess movie name\n2. Unlock another letter\nChoose : ")
-                    if int(d)==1:
+                    if d=="1":
                         ans=input("Enter movie Name : ")
                         if ans.lower()==mm.lower():
-                            pp1+=1
+                            pp2+=1
                             print("Answer is Correct")
                             notsaid=False
-                            print(p1,"Your Score is : ",pp1)
+                            print(p1,"Your Score is : ",pp2)
                         else:
                             print("Wrong Answer. Try again")
                 else:
                     print(l,"not found")
             c=input("Press 1 to continue or 0 to quit : ")  
-            if c==0:
+            if c=="0":
                 print(p1,"score : ",pp1)
                 print(p2,"score : ",pp2)
                 will=False
