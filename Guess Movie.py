@@ -1,3 +1,5 @@
+
+import random
 m = [
     "The Lord of the Rings: The Fellowship of the Ring",
     "The Lord of the Rings: The Two Towers",
@@ -103,5 +105,24 @@ m = [
 def play():
     p1=input("Enter Name of Player 1 : ")
     p2=input("Enter Name of Player 2 : ")
+    pp1=pp2=0
+    turn=0
+    will=True
+    while will:
+        if turn%2==0:
+            print("Turn of",p1)
+            mm=random.choice(m)
+            
+            notsaid=True
+            while notsaid:
+                letter=input("Your Letter : ")
+                if letter in m:
+                    #unlock
+                else:
+                    print(letter,"not found")
+        else:
+            #player 2
+        turn+=1
+        
     
 play()
