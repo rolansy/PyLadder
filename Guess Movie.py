@@ -140,7 +140,7 @@ def play():
                 print(p2,"score : ",pp2)
                 will=False
         else:
-            print("Turn of",p1)
+            print("Turn of",p2)
             mm=random.choice(m)
             qn=createqn(mm)
             print (qn)
@@ -156,10 +156,10 @@ def play():
                     if d==1:
                         ans=input("Enter movie Name : ")
                         if ans==mm:
-                            pp1+=1
+                            pp2+=1
                             print("Answer is Correct")
                             notsaid=False
-                            print(p1,"Your Score is : ",pp1)
+                            print(p2,"Your Score is : ",pp2)
                         else:
                             print("Wrong Answer. Try again")
                 else:
