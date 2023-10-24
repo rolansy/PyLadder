@@ -100,3 +100,8 @@ m = [
     "Birdman",
     "The Shape of Water"
 ]
+def play():
+    p1=input("Enter Name of Player 1 : ")
+    p2=input("Enter Name of Player 2 : ")
+    
+play()
