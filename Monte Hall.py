@@ -1,6 +1,6 @@
 import random
 door={}
-gdoor={}
+gdoor=[]
 swap=0
 dontswap=0
 x=random.randint(0, 2)
@@ -10,4 +10,11 @@ for i in range(3):
         continue
     else:
         door[i]="Goat"
+        gdoor.append(i)
+c=int(input("Enter your Choice : "))
+dooropen=random.choice(gdoor)
+while(dooropen==c): #so that at the end, dooropen != c
+    dooropen=random.choice(gdoor)
+
+
 
