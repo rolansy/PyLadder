@@ -1,10 +1,6 @@
 import random
 
-a=[]
-for i in range(1,100):
-    x=random.randint(500,1000)
-    if x not in a:
-        a.append(random.randint(1,10000))
+a=list(range(1,300))
 
 def bins(a,x):
     top=0
@@ -20,4 +16,6 @@ def bins(a,x):
             end=mid-1
         else: 
             top=mid+1
+    print("Not Found")
+bins(a, 250)
     
