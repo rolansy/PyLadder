@@ -19,10 +19,11 @@ def rps(n1,n2,b1,b2):
 pl1={0:'r',1:'p',2:'s'}
 pl2={0:'p',1:'r',2:'s'}
 while(1):
-    n1=input("Player 1 Enter Choice : ")
-    n1=input("Player 2 Enter Choice : ")
-    bit1=int(input("Player , Enter Secret Bit Position : "))
-    bit2=int(input("Player , Enter Secret Bit Position : "))
-    ch=input("Do you Want to Make Changes : ")
+    n1=input("Player 1 Enter Number String Choice : ")
+    n2=input("Player 2 Enter Number String Choice : ")
+    bit1=int(input("Player 1, Enter Secret Bit Position : "))
+    bit2=int(input("Player 2, Enter Secret Bit Position : "))
+    rps(n1,n2,bit1,bit2)
+    ch=input("Do you Want to Continue [y/n] : ")
     if (ch=='n'):
         break
