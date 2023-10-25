@@ -1,5 +1,5 @@
 
-a=list(range(1,30000))
+a=list(range(1,100001))
 
 def bins(a,x):
     top=0
@@ -19,4 +19,4 @@ def bins(a,x):
         else: 
             top=mid+1
     print("Not Found")
-bins(a, 25)
+bins(a, 10000)
