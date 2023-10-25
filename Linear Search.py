@@ -1,9 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Oct 25 21:50:53 2023
+def lins(a,x):
+    for i in a:
+        if i==x:
+            print("Found",i,"at position : ",x)
 
-@author: ronal
-"""
+a=list(range(1,1000))
 
-
-a=list(range( 1,1000))
+lins(a,500)
