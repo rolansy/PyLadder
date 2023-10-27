@@ -7,7 +7,6 @@ Created on Fri Oct 27 22:32:14 2023
 
 import numpy
 a=numpy.array([['-','-','-'],['-','-','-'],['-','-','-']])
-print(a)
 p1='X'
 p2='O'
 def place(s): 
@@ -30,7 +29,7 @@ def checkr(s):
         if c==3:
             print(s,"won!")
             return True
-    False
+    return False
     
 def checkc(s):
     for c in range(3):
@@ -41,13 +40,13 @@ def checkc(s):
         if c==3:
             print(s,"won!")
             return True
-    False    
+    return False    
     
 def checkd(s):
-    if a[0][0]==a[1][1] and a[1][1]==a[2][2] and a[2][2]==s:
+    if a[0][2]==a[1][1] and a[1][1]==a[2][0] and a[1][1]==s:
         print(s,"won!")
         return True
-    if a[0][2]==a[1][1] and a[1][1]==a[2][0] and a[2][0]==s:
+    if a[0][0]==a[1][1] and a[1][1]==a[2][2] and a[1][1]==s: 
         print(s,"won!")
         return True
     return False
@@ -61,13 +60,16 @@ def play():
             print("turn of ",p1)
             place(p1)
             if won(p1):
+                print(numpy.matrix(a))
                 break
         else:
             print("turn of ",p2)
             place(p2)
             if won(p2):
+                print(numpy.matrix(a))
                 break
         if not(won(p1)) and not(won(p2)):
+            print(numpy.matrix(a))
             print("Draw")
 
 
