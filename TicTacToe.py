@@ -22,7 +22,7 @@ def place(s):
     a[r-1][c-1]=s
     
 def won(s):
-    print("")
+    return checkr(s) or checkc(s) or checkd(s)
 
 def play():
     for turn in range(9):
