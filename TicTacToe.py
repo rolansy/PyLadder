@@ -10,6 +10,17 @@ a=numpy.array([['-','-','-'],['-','-','-'],['-','-','-']])
 print(a)
 p1='X'
 p2='O'
+def place(s): 
+    print(numpy.matrix(a))
+    while(1):
+        r=int(input("Enter Row [1/2/3]: "))
+        c=int(input("Enter Column [1/2/3]: "))
+        if r in [1,2,3] and c in [1,2,3] and a[r-1][c-1]=='-':
+            break
+        else:
+            print("Invalid Input. Enter Again")
+    a[r-1][c-1]=s
+
 def play():
     for turn in range(9):
         if turn%2==0:
@@ -22,7 +33,6 @@ def play():
             place(p2)
             if won(p2):
                 break
-            
 
 
 play
