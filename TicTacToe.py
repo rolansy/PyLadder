@@ -33,6 +33,8 @@ def play():
             place(p2)
             if won(p2):
                 break
+        if not(won(p1)) and not(won(p2)):
+            print("Draw")
 
 
 play
