@@ -31,6 +31,17 @@ def checkr(s):
             print(s,"won!")
             return True
     False
+    
+def checkc(s):
+    for c in range(3):
+        c=0
+        for r in range(3):
+            if a[r][c]==s:
+                c+=1
+        if c==3:
+            print(s,"won!")
+            return True
+    False    
 
 
 def won(s):
