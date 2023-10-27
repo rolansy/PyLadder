@@ -42,7 +42,15 @@ def checkc(s):
             print(s,"won!")
             return True
     False    
-
+    
+def checkd(s):
+    if a[0][0]==a[1][1] and a[1][1]==a[2][2] and a[2][2]==s:
+        print(s,"won!")
+        return True
+    if a[0][2]==a[1][1] and a[1][1]==a[2][0] and a[2][0]==s:
+        print(s,"won!")
+        return True
+    return False
 
 def won(s):
     return checkr(s) or checkc(s) or checkd(s)
