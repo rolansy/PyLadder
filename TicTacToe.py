@@ -21,6 +21,18 @@ def place(s):
             print("Invalid Input. Enter Again")
     a[r-1][c-1]=s
     
+def checkr(s):
+    for r in range(3):
+        c=0
+        for c in range(3):
+            if a[r][c]==s:
+                c+=1
+        if c==3:
+            print(s,"won!")
+            return True
+    False
+
+
 def won(s):
     return checkr(s) or checkc(s) or checkd(s)
 
