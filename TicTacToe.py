@@ -20,6 +20,9 @@ def place(s):
         else:
             print("Invalid Input. Enter Again")
     a[r-1][c-1]=s
+    
+def won(s):
+    print("")
 
 def play():
     for turn in range(9):
@@ -37,4 +40,4 @@ def play():
             print("Draw")
 
 
-play
+play()
