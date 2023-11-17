@@ -1,12 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct 28 03:52:25 2023
-
-@author: ronal
-"""
-
+from gmplot import gmplot
 import csv
-with open ('route.csv','r') as f:
+
+gmap=gmplot.GoogleMapPlotter(28.689169, 77.324448, 17 )
+
+'''with open ('route.csv','r') as f:
     rr=csv.reader(f)
     
     for r in rr:
@@ -15,4 +12,4 @@ with open ('route.csv','r') as f:
         print(lat)
         print(long)
         print(lat+long)
-        
+        '''
