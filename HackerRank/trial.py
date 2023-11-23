@@ -1,13 +1,14 @@
-if __name__ == '__main__':
-    n = int(input())
-    student_marks = {}
-    for _ in range(n):
-        name, *line = input().split()
-        scores = list(map(float, line))
-        student_marks[name] = scores
-    query_name = input()
-s=n=0
-for i in student_marks[query_name]:
-    s+=i
-    n+=1
-print(format(s/n,".2f"))
+n=int(input())
+l=[]
+d={}
+for i in range(n):
+    l.append(input())
+for i in l:
+    if i not in d.keys():
+        d[i]=1
+    else:
+        d[i]+=1
+print(len(d.keys()))
+for i in d.keys():
+    print(d[i],end=" ")
+    
