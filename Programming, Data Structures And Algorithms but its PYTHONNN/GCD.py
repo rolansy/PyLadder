@@ -1,16 +1,9 @@
 m=int(input("Enter First Number : "))
 n=int(input("Enter Second Number : "))
 def gcd(m,n):
-    a=[]
-    b=[]
-    for i in range(1,max(m,n)+1):
-        if m%i==0:
-            a.append(i)
-        if n%i==0:
-            b.append(i)
     x=[]
-    for i in a:
-        if i in b:
+    for i in range(1,min(m,n)+1):
+        if m%i==0 and n%i==0:
             x.append(i)
     return (x[-1])
         
