@@ -1,18 +1,10 @@
+import re
 
 def ver(s):
-	if '@' not in s:
-		print('a')
-		return False
-	if '.' not in s[s.index('@'):]:
-		print('b')
-		return False
-	if not s[s.index('@')+1:s[s.index('@'):].index('.')].isalpha():
-		print('c')
-		return False
-	if not s[s[s.index('@'):].index('.')+1:].isalpha():
-		print('d')
-		return False
-	return True
+    em=r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+    if re.match(em,s):
+        return True
+    return False
 
 x=input("Enter Email : ")
 t=ver(x)
