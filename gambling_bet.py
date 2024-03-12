@@ -8,7 +8,7 @@ Created on Sat Oct 28 04:46:18 2023
 import random
 import matplotlib.pyplot as plt
 
-acc=100
+ACC=100
 x=[]
 y=[]
 for i in range(365):
@@ -16,10 +16,10 @@ for i in range(365):
     bet=random.randint(1,10)
     draw=random.randint(1,10)
     if bet==draw:
-        acc+=900-100
+        ACC+=900-100
     else:
-        acc-=100
-    y.append(acc)
-print(acc)
+        ACC-=100
+    y.append(ACC)
+print(ACC)
 plt.plot(x,y)
 plt.show()
