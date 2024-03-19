@@ -13,7 +13,7 @@ def bsearch(v,seq,l,r):
         print(v,"found at ",mid)
         return True
     if v>seq[mid]:
-        return bsearch(v, seq, mid, r)
+        return bsearch(v, seq, mid+1, r)
     elif v<seq[mid]:
         return bsearch(v, seq, l, mid)
     
