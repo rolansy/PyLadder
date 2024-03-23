@@ -32,7 +32,7 @@ class Node:
             temp=temp.next
         newnode=Node(v)
         temp.next=newnode
-        return()
+        return
     
     def printi(self):
         if self.isempty():
@@ -44,6 +44,17 @@ class Node:
             temp=temp.next
         print("x")
         return
+    
+    def insert(self,v):
+        if self.isempty():
+            self.value=v
+            return
+        newnode=Node(v)
+        self.value,newnode.value=newnode.value,self.value
+        self.next,newnode.next=newnode,self.next
+        return
+    
+    
         
     
     
