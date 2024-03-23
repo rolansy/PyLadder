@@ -9,8 +9,8 @@ class tree:
     def __init__(self,initval=None):
         self.value=initval
         if self.value:
-            self.left=tree(input("Enter Left Node : "))
-            self.right=tree(input("Enter Right Node : "))
+            self.left=tree()
+            self.right=tree()
         else:
             self.left=None
             self.right=None
@@ -48,6 +48,22 @@ class tree:
         if self.right==None:
             return (self.value)
         return self.right.maxval()
+    
+    def insert(self,v):
+        
+        if self.isempty():
+            self.value=v
+            self.left=tree()
+            self.right=tree()
+            
+        if self.value==v:
+            return
+        
+        if v<self.value:
+            self.left.insert(v)
+            return
+        self.right.insert(v)
+        return
     
     
     
