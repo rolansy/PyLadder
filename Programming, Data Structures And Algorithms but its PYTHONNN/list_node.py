@@ -13,3 +13,38 @@ class Node:
     def isempty(self):
         return(self.value==None)
     
+    def append(self,v):
+        if self.isempty():
+            self.value=v
+        elif self.next==None:
+            newnode=Node(v)
+            self.next=newnode
+        else:
+            (self.next).append(v)
+        return
+    
+    def appendi(self,v):
+        if self.isempty():
+            self.value=v
+            return
+        temp=self
+        while temp.next!=None:
+            temp=temp.next
+        newnode=Node(v)
+        temp.next=newnode
+        return()
+    
+    def printi(self):
+        if self.isempty():
+            print("Empty")
+            return
+        temp=self
+        while temp!=None:
+            print(temp.value,"->",end="")
+            temp=temp.next
+        print("x")
+        return
+        
+    
+    
+    
