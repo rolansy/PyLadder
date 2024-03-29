@@ -65,6 +65,28 @@ class tree:
         self.right.insert(v)
         return
     
+    def delete(self,v):
+        if self.isempty():
+            print("Empty")
+            return
+        if v<self.value:
+            v.left.delete(v)
+            return
+        if v>self.value:
+            v.right.delete(v)
+            return
+        
+        if v==self.value:
+            if self.isleaf():
+                self.makeempty()
+            elif self.left.isempty():
+                self.copyright()
+            else:
+                self.value=self.left.maxval()
+                self.left.delete((self.left.maxval()))
+            return
+    
+    
     
     
     
