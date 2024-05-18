@@ -13,3 +13,11 @@ vals,vecs=np.linalg.eig(a)
 print(vals,vecs,sep="\n")
 print(np.linalg.inv(a))
 
+n=int(input())
+a=[]
+for i in range(n):
+    c=list(map(float,input().split()))
+    a.append(c)
+
+print(np.linalg.det(a).round(2))
+
