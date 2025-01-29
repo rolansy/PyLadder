@@ -25,9 +25,26 @@ def dfs(graoh,start,visited=None):
         if neighbour not in visited:
             dfs(graph, neighbour, visited)
 
+from collections import deque
+
+def bfs(graph,start):
+    visited=set()
+    queue=deque([start])
+    print(queue)
+    visited.add(start)
+    while queue:
+        node=queue.popleft()
+        print(node,end=' ')
+        for neighbour in graph[node]:
+            if neighbour not in visited:
+                visited.add(neighbour)
+                queue.append(neighbour)
+            
+        
 
 
 print(graph)
 
 
 dfs(graph, 'A')
+bfs(graph,'A')
