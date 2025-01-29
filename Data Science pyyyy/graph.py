@@ -16,4 +16,18 @@ for i in range(n):
     print(f"Edge {n} : ")
     add_edge(graph,input("Enter node1 : "),input("Enter node2 : "))
     
+def dfs(graoh,start,visited=None):
+    if visited is None:
+        visited=set()
+    visited.add(start)
+    print(start,end='-> ')
+    for neighbour in graoh[start]:
+        if neighbour not in visited:
+            dfs(graph, neighbour, visited)
+
+
+
 print(graph)
+
+
+dfs(graph, 'A')
