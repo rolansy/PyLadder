@@ -1,0 +1,8 @@
+def makingAnagrams(s1, s2):
+    from collections import Counter
+    c1 = Counter(s1)
+    c2 = Counter(s2)
+    deletions = 0
+    for ch in set(c1.keys()).union(c2.keys()):
+        deletions += abs(c1.get(ch, 0) - c2.get(ch, 0))
+    return deletions
